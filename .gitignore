@@ -1,0 +1,9 @@
+data/
+*.zip
+*.csv
+!test_dataset.csv
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.idea/
+.DS_Store
