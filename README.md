@@ -8,10 +8,14 @@ Trois participants suivis du 1er novembre 2019 au 31 mars 2020.
 
 ## Objectifs
 
-- Construire une table exploitable au pas participant-jour à partir de sources hétérogènes
+- Rassembler des sources hétérogènes en une table unique : une ligne par
+  participant et par jour
 - Caractériser la qualité et la complétude des données
-- Construire un indice de readiness comme proxy de la capacité à performer
-- Modéliser le risque de blessure et l'indice de readiness
+- Construire deux cibles de prédiction :
+  - **un indice de readiness** : l'état de préparation du sportif, construit à
+    partir du questionnaire quotidien ;
+  - **le risque de blessure** sur une fenêtre temporelle définie.
+- Entraîner et valider un modèle pour chacune
 
 ## Installation
 
@@ -53,14 +57,14 @@ jupyter notebook analysis_athlete.ipynb
 Exécuter les cellules dans l'ordre. Le notebook est structuré selon les quatre
 blocs de l'énoncé :
 
-1. Database handling — audit, agrégation, données nutritionnelles
-2. Overview — structure, complétude, distributions
-3. Pre-processing — types, valeurs aberrantes, valeurs manquantes
-4. Modeling — variables construites, indice, deux modèles
+1. Database handling : audit, agrégation, données nutritionnelles
+2. Overview : structure, complétude, distributions
+3. Pre-processing : types, valeurs aberrantes, valeurs manquantes
+4. Modeling : variables construites, indice, deux modèles
 
-Le temps de traitement est dominé par le chargement des flux de fréquence
-cardiaque (1,5 million de mesures par participant) et par l'extraction des
-métadonnées d'images.
+Compter environ cinq minutes d'exécution complète : le chargement des flux de
+fréquence cardiaque (1,5 million de mesures par participant) et l'extraction des
+métadonnées d'images sont les étapes dominantes.
 
 Le script d'extraction EXIF peut être lancé indépendamment :
 
@@ -72,7 +76,7 @@ python src/metadonnees_images.py
 
 | Fichier | Contenu |
 |---|---|
-| `test_dataset.csv` | table nettoyée, 456 lignes × 52 colonnes |
+| `test_dataset.csv` | table nettoyée, 456 lignes × 58 colonnes |
 | `rapport_analyse_athletes.docx` | rapport de synthèse |
 | `analysis_athlete.ipynb` | analyse complète et code |
 
