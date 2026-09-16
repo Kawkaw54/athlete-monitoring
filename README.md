@@ -1,7 +1,8 @@
-# Athlete Monitoring — Analyse multimodale
+# Analyse multimodale de données d'athlètes
 
 Agrégation, nettoyage et modélisation de données de suivi d'athlètes combinant
-capteurs portés, questionnaires quotidiens et déclarations alimentaires.
+un capteur porté Fitbit, des questionnaires quotidiens et des déclarations
+alimentaires.
 
 Trois participants suivis du 1er novembre 2019 au 31 mars 2020.
 
@@ -17,7 +18,7 @@ Trois participants suivis du 1er novembre 2019 au 31 mars 2020.
 Python 3.10 ou supérieur.
 
 ```bash
-git clone <url-du-depot>
+git clone https://github.com/Kawkaw54/athlete-monitoring.git
 cd athlete-monitoring
 python -m venv .venv
 source .venv/bin/activate        # Windows : .venv\Scripts\activate
