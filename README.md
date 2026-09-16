@@ -65,7 +65,7 @@ métadonnées d'images.
 Le script d'extraction EXIF peut être lancé indépendamment :
 
 ```bash
-python src/extraire_metadonnees.py
+python src/metadonnees_images.py
 ```
 
 ## Livrables
